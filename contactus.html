@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-erquiv="X-UA-Compatible" context="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactus.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <title>Contact Us</title>
+
+    <script>
+        function validate(){
+        var firstName = document.getElementById("firstName");
+        var lastName = document.getElementById("lastName");
+        var phone = document.getElementById("mobile");
+        var Email = document.getElementById("email")
+
+            if (firstName.value.trim()=="" ||  lastName.value.trim()=="")
+            {
+                alert("We can't know accept  without your personal details");
+                return false;
+            }
+
+            else if(Email.value.trim()==""||phone.value.trim()=="")
+            {
+                alert ("Please fill in either phone or email ");
+                return false;
+            }
+            
+            else
+            {
+                alert("We will replyyour message asap")
+            }
+
+
+        }
+    </script>
+
+</head>
+
+
+
+
+
+<header class = "header" id = "header">
+    <div class = "logo">
+        <a href="homepage.php"><h1>Theatre Society</h1></a>
+    </div>
+    
+        <div class="btns">
+            <ul class="links">
+
+                <li><a href ="contactus.html">Contact Us</a></li>
+                <li><a href ="about us.html">About Us</a></li>
+                <li><a href ="faq.html">FAQ</a></li>
+                <li><a href ="history.php">Events History</a></li>
+                <li><a href ="logout.php"> <i class="bi bi-box-arrow-right"></i></a></li>
+            </ul>
+
+            
+        </div>
+</header>
+
+<body>
+    <div class = "container">
+        <form>
+            <h2> Contact Us Form</h2>
+            <input type = "text" id = "firstName" placeholder = "First Name" >
+            <input type = "text" id = "lastName" placeholder = "Last Name" >
+            <input type = "email" id = "email" placeholder = "Email" >
+            <input type = "text" id = "mobile" placeholder = "Mobile" >
+            <h5>Type Your Message Here...</h5>
+            <textarea required></textarea>
+            <input type = "submit" value = "Send" id = "button" onclick="validate()">
+
+        </form>
+    </div>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+</html>
